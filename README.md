@@ -1,2 +1,7 @@
 # AesKey-Bot
-An AesKey Discord bot coded in node.js.
+An Discord Bot that gets the current aes key in the game.
+
+### How to use?
+You need to install Node.js.
+After run install.bat.
+Then start.bat.
