@@ -7,3 +7,6 @@ You need to install Node.js.
 After run install.bat.
 Then start.bat.
 ```
+
+### How to get a discord bot token?
+Login on https://discord.com/developers/applications and create an application. 
