@@ -2,7 +2,7 @@ const axios = require('axios');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var token = ""; //you discord bot token
+var token = ""; //discord bot token here
 
 client.on('ready', () => {
     console.log("Logged in.");
@@ -20,7 +20,8 @@ client.on('message', msg => {
         if (command == "aes") //command name
         {
             axios({
-                url: "https://api.nitestats.com/v1/aes", //gets the aes key and version
+                //gets the aes key and version
+                url: "https://benbot.app/api/v1/aes", //old api was outdated so we moved to benbot
                 params: { displayName: text },
                 method: "GET",
                 responsType: "json"
@@ -29,7 +30,7 @@ client.on('message', msg => {
                 let embed = new Discord.RichEmbed()
                 .setColor("#0xff0000)")
                 .addField("Game Version:", aspect.data.version) //version
-                .addField("MainKey:", aspect.data.aes) //aes key               				
+                .addField("MainKey:", aspect.data.mainKey) //aes key               				
                 return msg.channel.send(embed); //sends the embed
             });
         }
